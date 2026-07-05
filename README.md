@@ -10,14 +10,14 @@ Keeping your own copy of the upstream `oauth2-proxy` image lets you pin to a kno
 
 | Tag | Source tag |
 |-----|------------|
-| `ghcr.io/hwong/homelab-oauth2-proxy:latest` | upstream `quay.io/oauth2-proxy/oauth2-proxy:latest` |
-| `ghcr.io/hwong/homelab-oauth2-proxy:<run_number>` | immutable build tag per CI run |
+| `ghcr.io/simplylimitless/homelab-oauth2-proxy:latest` | upstream `quay.io/oauth2-proxy/oauth2-proxy:latest` |
+| `ghcr.io/simplylimitless/homelab-oauth2-proxy:<run_number>` | immutable build tag per CI run |
 
 ## Local usage
 
 ```shell
-docker pull ghcr.io/hwong/homelab-oauth2-proxy:latest
-docker run --rm ghcr.io/hwong/homelab-oauth2-proxy:latest --help
+docker pull ghcr.io/simplylimitless/homelab-oauth2-proxy:latest
+docker run --rm ghcr.io/simplylimitless/homelab-oauth2-proxy:latest --help
 ```
 
 ## Configuration
