@@ -6,6 +6,15 @@ A thin Docker wrapper around the official [`oauth2-proxy`](https://github.com/oa
 
 Keeping your own copy of the upstream `oauth2-proxy` image lets you pin to a known-good version, add custom config maps or middleware in a later layer, and avoid rate-limits on pulling from Docker Hub.
 
+## Supported architectures
+
+Published as a multi-arch manifest for:
+
+- `linux/amd64`
+- `linux/arm64`
+
+Docker/Podman pull the correct variant for your host automatically. The upstream `oauth2-proxy` image also publishes `linux/arm/v7`, `linux/ppc64le`, and `linux/s390x`, but this project only builds and publishes `amd64` and `arm64`.
+
 ## Image tags
 
 | Tag | Source tag |
@@ -37,8 +46,9 @@ Configure oauth2-proxy at runtime via flags, env vars, or a config file mounted 
 Pushing to `main` triggers `.github/workflows/docker.yml` which:
 
 1. Checks out the repo
-2. Logs into GHCR
-3. Builds and pushes the image
+2. Sets up QEMU and Buildx for multi-arch builds
+3. Logs into GHCR
+4. Builds and pushes a multi-arch image (`linux/amd64`, `linux/arm64`)
 
 No changes to this Dockerfile are needed to publish — it re-bases every push on the upstream `latest`.
 
