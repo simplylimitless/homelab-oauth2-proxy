@@ -1,4 +1,4 @@
-# homelab-oauth2-proxy
+# oauth2-proxy
 
 A thin Docker wrapper around the official [`oauth2-proxy`](https://github.com/oauth2-proxy/oauth2-proxy) image, published to GitHub Container Registry (GHCR).
 
@@ -19,14 +19,14 @@ Docker/Podman pull the correct variant for your host automatically. The upstream
 
 | Tag | Source tag |
 |-----|------------|
-| `ghcr.io/simplylimitless/homelab-oauth2-proxy:latest` | upstream `quay.io/oauth2-proxy/oauth2-proxy:latest` |
-| `ghcr.io/simplylimitless/homelab-oauth2-proxy:<run_number>` | immutable build tag per CI run |
+| `ghcr.io/simplylimitless/oauth2-proxy:latest` | upstream `quay.io/oauth2-proxy/oauth2-proxy:latest` |
+| `ghcr.io/simplylimitless/oauth2-proxy:<run_number>` | immutable build tag per CI run |
 
 ## Local usage
 
 ```shell
-docker pull ghcr.io/simplylimitless/homelab-oauth2-proxy:latest
-docker run --rm ghcr.io/simplylimitless/homelab-oauth2-proxy:latest --help
+docker pull ghcr.io/simplylimitless/oauth2-proxy:latest
+docker run --rm ghcr.io/simplylimitless/oauth2-proxy:latest --help
 ```
 
 ## Configuration
